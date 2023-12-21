@@ -26,6 +26,12 @@ Dále je možné nastavit zda se na obrázky má použít filtr pro příslšný
 
 Barevný motiv pro tisk je černobílý a nelze to změnit. Obrázky mají černobílý filtr.
 
+## Linefont a Wevefont
+
+Pokud uvnitř `<em>` použijete `<code>`, změní se font na [Linefont](https://fonts.google.com/specimen/Linefont). Pokud uvnitř `<strong>` použijete `<code>` 
+změní se font na [Wavefont](https://fonts.google.com/specimen/Wavefont). Je to užitečné pro tvorbu inline grafů. Doporučují si najít [princip 
+fungování](https://fonts.google.com/specimen/Linefont/about) těchto fontů.
+
 ## Nádcházející funkce
 
 - tmavý motiv
