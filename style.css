@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Linefont:wght@300&family=Wavefont&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300;0,5..1200,400;0,5..1200,500;0,5..1200,600;0,5..1200,700;0,5..1200,800;0,5..1200,900;1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,600;1,5..1200,700;1,5..1200,800;1,5..1200,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+	font-family: "Poppins";
+	background-color: var(--pozadi);
+	margin: 0px;
+	padding: 12.5%;
+	color: var(--main);
+	font-size: 1.2em;
+	text-align: justify;
+}
+
+@keyframes skok {
+	from {bottom: 0;}
+	to {bottom: 0.25em;}
+}
+a[href] {
+	color: var(--odkaz);
+	text-decoration-thickness: 2px;
+}
+a[href]:hover {
+	position: relative;
+	animation: skok alternate 2 0.1s cubic-bezier(.45,.05,.55,.95);
+}
+
+blockquote {
+	background-color: var(--citat-1);
+	border-left: var(--citat-2) 10px solid;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 30px;
+	text-align: left;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul ul, ul ol, ol ul, ol ol {margin: 0px;}
+ul {list-style-type: "– ";}
+ul ul, ol ul {list-style-type: "» ";}
+ol {list-style-type: decimal;}
+ul ol, ol ol {list-style-type: lower-latin;}
+ul ul ol, ul ol ol, ol ul ol, ol ol ol {list-style-type: lower-roman;}
+
+hr {
+	border: 0;
+	border-bottom: 2px dashed var(--odkaz);
+	margin: 0px 12.5%;
+}
+
+em code, i code {
+	font-family: "Linefont";
+	font-style: normal;
+}
+strong code, b code {
+	font-family: "Wavefont";
+	font-weight: 400;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0px;
+}
+td,th {
+    border: 1px var(--main) solid;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    max-width:50%;
+}
+th {
+    background-color: var(--citat-1);
+}
+
+@media print {
+	:root {
+		--main: black;
+		--odkaz: black;
+		--citat-1: silver;
+		--citat-2: gray;
+		--pozadi: white;
+	}
+	img{filter: grayscale(100%);}
+	
+	body {
+		margin: 0px;
+		font-family: "Playfair";
+		font-size: 12pt;
+	}
+	h1 {
+		page-break-before: always;
+		page-break-after: avoid;
+	}
+	h1:first-of-type {page-break-before: auto;}
+	h1,h2,h3,h4 {
+		font-family: "Playfair Display";
+	}
+
+    blockquote {
+        background-color: initial;
+        border: 1px solid var(--citat-2);
+	    border-left: var(--citat-2) 10px solid;
+    }
+    
+    table {page-break-inside: avoid;}
+}
+@page {margin: 1.5cm ;}
