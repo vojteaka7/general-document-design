@@ -33,4 +33,5 @@ Barevný motiv pro tisk je černobílý a nelze to změnit. Obrázky mají čern
 
 ---
 
-Soubor `index.html` slouží pouze jako příklad.
+- soubor `index.html` slouží pouze jako příklad
+- soubor `style-min.js` je dostupný též na adrese: `http://vojteaka.cz/assets/js/gdd-min.js`
